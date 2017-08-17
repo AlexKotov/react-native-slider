@@ -2,6 +2,7 @@
   "name": "react-native-slider",
   "version": "0.11.0",
   "description": "A pure JavaScript <Slider /> component for react-native",
+  "_comment": "changed path to Slider.js like in original repo",
   "main": "src/Slider.js",
   "files": [
     "lib",
