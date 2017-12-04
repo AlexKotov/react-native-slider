@@ -390,7 +390,15 @@ export default class Slider extends PureComponent {
 
   _getValue = (gestureState: Object) => {
     var length = this.state.containerSize.width - this.state.thumbSize.width;
-    var thumbLeft = this._previousLeft - (this.props.vertical ? gestureState.dy : gestureState.dx);
+    var thumbLeft;
+
+    // thumbLeft = this._previousLeft + gestureState.dx;
+
+    if (this.props.vertical) {
+      thumbLeft = this._previousLeft - gestureState.dy;
+    } else {
+      thumbLeft = this._previousLeft + gestureState.dx;
+    }
 
     var ratio = thumbLeft / length;
 
